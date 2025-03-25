@@ -1,10 +1,11 @@
 import { Canvas, useLoader } from '@react-three/fiber'; // useLoader is imported from @react-three/fiber
 import { OrbitControls } from '@react-three/drei';
-import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
+import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
 // import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader';
 import { useFrame } from '@react-three/fiber';
 import { useRef } from 'react';
 import { TextureLoader } from 'three';
+import * as THREE from 'three';
 
 function Model({ scale }: { scale?: [number, number, number] }) {
     const obj = useLoader(OBJLoader, '/win95.obj'); // Tải file OBJ
@@ -12,11 +13,14 @@ function Model({ scale }: { scale?: [number, number, number] }) {
 
     // Áp dụng texture vào mô hình
     obj.traverse((child) => {
-        if (child.isMesh) {
-            child.material.map = texture; // Gán texture vào thuộc tính map
+        if ((child as THREE.Mesh).isMesh) {
+            const material = (child as THREE.Mesh).material;
+            if (material instanceof THREE.MeshStandardMaterial) {
+                material.map = texture; // Gán texture vào thuộc tính map
+            }
         }
     });
-    const ref = useRef<THREE.Object3D>(); // Tạo reference để truy cập object
+    const ref = useRef<THREE.Object3D | null>(null); // Tạo reference để truy cập object
 
     // Cập nhật rotation mỗi frame
     useFrame(() => {
