@@ -1,36 +1,29 @@
 import { Canvas, useLoader } from '@react-three/fiber'; // useLoader is imported from @react-three/fiber
 import { OrbitControls } from '@react-three/drei';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
-// import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader';
+import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader.js';
 import { useFrame } from '@react-three/fiber';
 import { useRef } from 'react';
-import { TextureLoader } from 'three';
 import * as THREE from 'three';
 
 function Model({ scale }: { scale?: [number, number, number] }) {
-    const obj = useLoader(OBJLoader, '/win95.obj'); // Tải file OBJ
-    const texture = useLoader(TextureLoader, '/win95.png'); // Tải texture
-
-    // Áp dụng texture vào mô hình
-    obj.traverse((child) => {
-        if ((child as THREE.Mesh).isMesh) {
-            const material = (child as THREE.Mesh).material;
-            if (material instanceof THREE.MeshStandardMaterial) {
-                material.map = texture; // Gán texture vào thuộc tính map
-            }
-        }
+    const materials = useLoader(MTLLoader, '/win95.mtl'); // Tải tệp MTL
+    const obj = useLoader(OBJLoader, '/win95.obj', (loader) => {
+        materials.preload();
+        loader.setMaterials(materials); // Áp dụng vật liệu từ MTLLoader
     });
-    const ref = useRef<THREE.Object3D | null>(null); // Tạo reference để truy cập object
 
-    // Cập nhật rotation mỗi frame
+    const ref = useRef<THREE.Object3D | null>(null);
+
     useFrame(() => {
         if (ref.current) {
-            ref.current.rotation.y += 0.01; // Thay đổi giá trị để điều chỉnh tốc độ xoay
+            ref.current.rotation.y += 0.01; // Xoay mô hình
         }
     });
 
     return <primitive ref={ref} object={obj} scale={scale || [1, 1, 1]} />;
 }
+
 
 export default function ThreeScene() {
     return (
