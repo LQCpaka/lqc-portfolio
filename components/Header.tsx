@@ -5,7 +5,7 @@ import { Separator } from './ui/separator';
 
 const Header = () => {
   return (
-    <section className='w-full sticky top-0 z-50 text-white'>
+    <section className='w-full fixed top-0 z-50 text-white'>
       <header className='py-4 px-10 flex items-center justify-between gap-5 z-50 backdrop-blur-sm'>
         <Logo logoWidth={100} logoHeight={100} />
         <nav className='flex items-center justify-between gap-5'>

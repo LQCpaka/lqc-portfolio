@@ -7,8 +7,6 @@
     width: 400px; /* Chiều rộng */
     height: 400px; /* Chiều cao */
     margin: auto; /* Căn giữa */
-    /*border: 1px solid #ccc;  Viền nếu cần */
-    position: relative;
   }
   .root-container {
     @apply flex min-h-screen flex-1 flex-col bg-cover bg-top px-5 sm:px-10 md:px-16;

@@ -13,6 +13,13 @@ function Model({ scale }: { scale?: [number, number, number] }) {
         loader.setMaterials(materials); // Áp dụng vật liệu từ MTLLoader
     });
 
+    // Make the model responsive to window resizing
+    useFrame(({ size, camera }) => {
+        const aspect = size.width / size.height;
+        camera.aspect = aspect;
+        camera.updateProjectionMatrix();
+    });
+
     const ref = useRef<THREE.Object3D | null>(null);
 
     useFrame(() => {
@@ -27,7 +34,7 @@ function Model({ scale }: { scale?: [number, number, number] }) {
 
 export default function ThreeScene() {
     return (
-        <div className='canvas-container'>
+        <div className=' mx-auto'>
             <Canvas camera={{ position: [0, 0, 5] }}>
                 {/* Ánh sáng */}
                 <ambientLight intensity={0.5} /> {/* Ánh sáng môi trường */}

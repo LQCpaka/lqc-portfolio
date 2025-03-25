@@ -27,7 +27,7 @@ const DesireMyself = () => {
                     </span>
 
                 </div>
-                <div className='flex-grow flex-shrink basis-[30%]'>
+                <div className='flex-grow flex-shrink basis-[30%] mt-[500px] md:mt-0'>
                     <ModelScene />
                 </div>
             </div>

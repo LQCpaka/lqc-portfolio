@@ -7,7 +7,7 @@ const AboutMe = () => {
             <h2 className='text-blue-400 inline-block font-bold text-3xl mb-8'>
                 About me <Separator className='h-[2px]' />
             </h2>
-            <div className='ml-8'>
+            <div className=''>
                 <p className='flex text-2xl font-light text-gray-300 text-justify'>
                     Mình tên là Lê Quốc Cần, mình sinh năm 2003. Mình có một niềm đam mê với lập trình và game.
                     Đối với mình, việc đi ra ngoài dạo chơi hoặc việc ngủ cũng là thứ mà mình hứng thú hơn nếu mình không chọn chơi game hay lập trình.
