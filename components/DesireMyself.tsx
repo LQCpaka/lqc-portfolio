@@ -1,9 +1,6 @@
 import React from 'react'
-import Logo from '@/components/Logo'
 import ModelScene from '@/components/ModelScene'
-import Image from 'next/image'
-import { Typewriter } from 'react-simple-typewriter'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+
 
 
 const DesireMyself = () => {

@@ -1,7 +1,7 @@
 import { Canvas, useLoader } from '@react-three/fiber'; // useLoader is imported from @react-three/fiber
 import { OrbitControls } from '@react-three/drei';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
-import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader';
+// import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader';
 import { useFrame } from '@react-three/fiber';
 import { useRef } from 'react';
 import { TextureLoader } from 'three';
