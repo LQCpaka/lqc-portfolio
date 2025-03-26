@@ -28,15 +28,15 @@ function Model({ scale }: { scale?: [number, number, number] }) {
 
 export default function ThreeScene() {
     return (
-        <div className=''>
-            <Canvas camera={{ position: [0, 0, 5] }}>
+        <div>
+            <Canvas className='w-[50vw] h-[50vh] mx-auto' camera={{ position: [0, 0, 5] }}>
                 {/* Ánh sáng */}
                 <ambientLight intensity={0.5} /> {/* Ánh sáng môi trường */}
                 <directionalLight position={[10, 10, 5]} intensity={1.5} /> {/* Ánh sáng có hướng */}
                 <pointLight position={[0, 0, 5]} intensity={2} /> {/* Ánh sáng điểm */}
 
                 {/* Model */}
-                <Model scale={[0.75, 0.75, 0.75]} />
+                <Model scale={[1, 1, 1]} />
 
                 {/* Điều khiển xoay camera */}
                 <OrbitControls enableDamping />

@@ -10,7 +10,7 @@ const Header = () => {
 
         <Logo logoWidth={100} logoHeight={100} />
         
-        <nav className='flex items-center justify-between gap-5'>
+        <nav className='flex items-center justify-between gap-5  md:block'>
           <Link href='/'>Về Tôi</Link>
           <Link href='/project'>Dự Án</Link>
           <Link href='/contact'>Liên Hệ</Link>

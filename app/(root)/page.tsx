@@ -8,7 +8,12 @@ import React from 'react'
 
 const Home = () => {
   return (     
+    <>
       <DesireMyself />
+      {/* <AboutMe /> */}
+    </>
+      
+      
   )
 }
 
