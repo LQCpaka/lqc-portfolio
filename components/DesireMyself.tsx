@@ -5,8 +5,8 @@ import ModelScene from '@/components/ModelScene'
 
 const DesireMyself = () => {
     return (
-        <div className=' mb-7 mt-28 md:mt-60 md:mb-10 lg:mb-20 max-w-5xl mx-auto text-white'>
-            <div className='flex flex-col-reverse md:flex-row justify-between gap-10 '>
+        <div className=' max-w-5xl mx-auto text-white mt-10'>
+            <div className='flex flex-col-reverse  md:flex-row justify-between gap-10 mx-5'>
                 <div className='flex-grow flex-shrink basis-[70%]'>
                     <span className='text-4xl text-center text-wrap whitespace-nowrap flex-wrap'>
                         <span className='flex items-center font-light text-blue-500 text-7xl'>Welcome.</span><br />
@@ -27,7 +27,7 @@ const DesireMyself = () => {
                     </span>
 
                 </div>
-                <div className='flex-grow flex-shrink basis-[30%] mt-[500px] md:mt-0'>
+                <div className='flex-grow flex-shrink basis-[30%]'>
                     <ModelScene />
                 </div>
             </div>

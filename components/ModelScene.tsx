@@ -28,7 +28,7 @@ function Model({ scale }: { scale?: [number, number, number] }) {
 
 export default function ThreeScene() {
     return (
-        <div className=' mx-auto'>
+        <div className=''>
             <Canvas camera={{ position: [0, 0, 5] }}>
                 {/* Ánh sáng */}
                 <ambientLight intensity={0.5} /> {/* Ánh sáng môi trường */}

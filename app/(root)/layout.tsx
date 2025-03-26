@@ -4,13 +4,9 @@ import { ReactNode } from 'react'
 
 const layout = ({ children }: { children: ReactNode }) => {
   return (   
-      <div className='flex flex-col w-full mx-auto bg-black'>
+      <div className='flex flex-col h-full w-full mx-auto bg-black'>
         <Header />
-        <main className='root-container'>
-          <div className='w-full mx-auto'>
-            <div className='mt-10 pb-20'>{children}</div>
-          </div>
-        </main>
+        {children}
       </div>
 
   )
