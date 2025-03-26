@@ -1,8 +1,8 @@
 "use client"
 
-import AboutMe from '@/components/AboutMe'
+// import AboutMe from '@/components/AboutMe'
 import DesireMyself from '@/components/DesireMyself'
-import ModelScene from '@/components/ModelScene'
+// import ModelScene from '@/components/ModelScene'
 import React from 'react'
 
 
