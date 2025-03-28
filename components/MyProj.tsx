@@ -1,8 +1,6 @@
 import React from 'react'
 import { Separator } from './ui/separator'
 import { BentoGrid, BentoGridItem } from './BentoGrid'
-import { title } from 'process'
-import Image from 'next/image'
 import Link from 'next/link'
 
 const items = [
