@@ -4,7 +4,7 @@ import React from 'react'
 const Footer = () => {
     return (
       <footer className="py-10 flex flex-col items-center w-full align-middle">
-        <Separator className='bg-white w-full h-[1px]' />
+        <Separator className=' w-full bg-gray-400 h-[0.5px]' />
         <div className="container mx-auto text-center">
           <p className="mb-2">© 2025 Your Website. All rights reserved.</p>
           <div className="flex justify-center space-x-4">

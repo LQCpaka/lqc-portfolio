@@ -19,7 +19,7 @@ const Header = () => {
         </nav>
 
       </header>
-      <Separator className='bg-gray-300 ' />
+      <Separator className='bg-gray-400 h-[0.5px] ' />
     </section>
   )
 }
