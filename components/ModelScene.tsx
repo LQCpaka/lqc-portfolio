@@ -29,7 +29,7 @@ function Model({ scale }: { scale?: [number, number, number] }) {
 export default function ThreeScene() {
     return (
         <div>
-            <Canvas className='w-[50vw] h-[50vh] mx-auto' camera={{ position: [0, 0, 5] }}>
+            <Canvas className='w-[500px] h-[500px] mx-auto' camera={{ position: [0, 0, 5] }}>
                 {/* Ánh sáng */}
                 <ambientLight intensity={0.5} /> {/* Ánh sáng môi trường */}
                 <directionalLight position={[10, 10, 5]} intensity={1.5} /> {/* Ánh sáng có hướng */}

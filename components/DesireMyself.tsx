@@ -5,7 +5,7 @@ import ModelScene from '@/components/ModelScene'
 
 const DesireMyself = () => {
     return (
-        <div className=' max-w-5xl mx-auto text-white mt-12 md:mt-52'>
+        <div className=' max-w-5xl mx-auto text-white mt-12 md:mt-24'>
             <div className='flex flex-col-reverse  md:flex-row items-center justify-between gap-10 mx-5'>
                 <div className='flex-grow flex-shrink basis-[60%]'>
                     <span className='text-4xl text-center'>

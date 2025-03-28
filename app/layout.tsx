@@ -21,11 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} antialiased`}>
+      <body className={`${roboto.className} antialiased bg-black`}>
         <AuroraBackground>
           {children}
         </AuroraBackground>
-
+        
       </body>
     </html>
   );
